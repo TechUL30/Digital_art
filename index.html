@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ART UNIVERSE — The World's Digital Art Museum</title>
+  <meta name="description" content="ART UNIVERSE is a digital art museum of openly licensed masterpieces from Wikimedia Commons — search, explore artists, discover at random and build your own collection.">
+  <meta name="theme-color" content="#f6f1e7">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://upload.wikimedia.org https://thumb.wikimedia.org; connect-src https://commons.wikimedia.org; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta property="og:title" content="ART UNIVERSE — The World's Digital Art Museum">
+  <meta property="og:description" content="Openly licensed masterpieces from Wikimedia Commons, presented with full attribution.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://commons.wikimedia.org" crossorigin>
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="#/" aria-label="ART UNIVERSE — home">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="7.5" class="logo__planet"/>
+          <ellipse cx="20" cy="20" rx="18" ry="7" class="logo__orbit" transform="rotate(-24 20 20)"/>
+          <circle cx="35.2" cy="13.4" r="1.9" class="logo__moon"/>
+        </svg>
+        <span class="logo__word"><span class="logo__art">ART</span><span class="logo__universe">Universe</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#/" data-nav="">Home</a></li>
+          <li><a href="#/explore" data-nav="explore">Collection</a></li>
+          <li><a href="#/artists" data-nav="artists">Artists</a></li>
+          <li><a href="#/discover" data-nav="discover">Discover</a></li>
+          <li><a href="#/favorites" data-nav="favorites">Favorites <span class="nav-count" id="fav-count" hidden></span></a></li>
+          <li><a href="#/about" data-nav="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="view" class="view">
+      <noscript>
+        <div class="state"><h2 class="state__title">JavaScript is required</h2><p class="state__msg">ART UNIVERSE loads artworks live from Wikimedia Commons in your browser.</p></div>
+      </noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__logo">ART <em>Universe</em></p>
+        <p>The world's digital art museum — openly licensed works, honestly attributed.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="#/explore">Collection</a>
+        <a href="#/artists">Artists</a>
+        <a href="#/discover">Random discovery</a>
+        <a href="#/favorites">Your favorites</a>
+        <a href="#/about">About &amp; licensing</a>
+      </nav>
+      <p class="site-footer__legal">
+        Artwork data and images from <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer external">Wikimedia Commons</a>,
+        shown under Public Domain, CC0, CC BY or CC BY-SA as recorded for each file. Not affiliated with the Wikimedia Foundation.
+        © <span id="year"></span> ART UNIVERSE.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top">↑</button>
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+</body>
+</html>
